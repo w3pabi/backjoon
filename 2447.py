@@ -1,3 +1,4 @@
+#unsolve
 def shape(n):
     return "***" * n
 
