@@ -1,17 +1,17 @@
-#unsolve
-def shape(n):
-    return "***" * n
+import sys
 
-def shape2():
-    return '* *'
-
-li = list()
-for i in range(1,8):
-    li.append(3**i)
+def shape(i, j):
+    while(i != 0):
+        if i % 3 == 1 and j % 3 == 1 :
+            sys.stdout.write(' ')
+            return None
+        i = i // 3
+        j = j // 3
+    sys.stdout.write('*')
 
 n = int(input())
-k = li.index(n)+1
 
-for i in range(0,n) :
-    for j in range(0, n):
-        print(shape1() * j)
+for i in range(n) :
+    for j in range(n):
+        shape(i, j)
+    sys.stdout.write('\n')
